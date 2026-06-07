@@ -10,9 +10,20 @@ on the Nous Research team.
 
 ## Install
 
+The skill declares `category: software-development` in its frontmatter, but
+Hermes's installer does not read that field — it derives category from the
+`--category` flag or an interactive prompt. Pass it explicitly so the skill
+lands next to its peers (`plan`, `writing-plans`, `subagent-driven-development`):
+
 ```bash
-hermes skills install https://github.com/tommulkins/hermes-skill-project-kickoff
+hermes skills install --category software-development \
+  https://github.com/tommulkins/hermes-skill-project-kickoff
 ```
+
+Without `--category`, the installer will prompt interactively (TTY only) or
+fall back to a flat install at `~/.hermes/skills/project-kickoff/`. The skill
+works either way; the category just groups it with related skills in
+`hermes skills list` and `hermes skills config`.
 
 Then verify it loaded:
 
