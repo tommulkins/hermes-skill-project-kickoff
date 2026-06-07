@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python (in case the skill ever grows scripts)
+__pycache__/
+*.pyc
+.venv/
+.env
