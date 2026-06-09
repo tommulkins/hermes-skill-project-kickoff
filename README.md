@@ -17,7 +17,16 @@ lands next to its peers (`plan`, `writing-plans`, `subagent-driven-development`)
 
 ```bash
 hermes skills install --category software-development \
-  https://github.com/tommulkins/hermes-skill-project-kickoff
+  https://raw.githubusercontent.com/tommulkins/hermes-skill-project-kickoff/main/SKILL.md
+```
+
+Hermes does not accept a bare `https://github.com/owner/repo` URL for
+single-file skills. Use the raw `SKILL.md` URL above, or install locally:
+
+```bash
+mkdir -p ~/.hermes/skills/software-development/project-kickoff
+cp SKILL.md ~/.hermes/skills/software-development/project-kickoff/
+hermes skills list | grep project-kickoff
 ```
 
 Without `--category`, the installer will prompt interactively (TTY only) or

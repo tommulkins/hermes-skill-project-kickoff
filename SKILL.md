@@ -90,10 +90,11 @@ explicit reconnaissance. Before writing any plan, list what's actually available
 
 - **Skills** — `search_files` for `SKILL.md` under `~/.hermes/skills/`, filter by
   tags relevant to the goal. Tell the user which ones apply.
-- **MCP tools** — check `mcp.servers` in `~/.hermes/config.yaml` and list any
-  configured servers that could help (GitHub, Cursor, FAL, etc.).
+- **MCP tools** — check which MCP servers are configured in the Hermes config
+  (`mcp.servers`) and list any that could help (GitHub, Cursor, FAL, etc.).
 - **Project context** — if a repo path is implied or given, `search_files` for
-  `AGENTS.md`, `CLAUDE.md`, `README.md` to learn the conventions.
+  common project instruction docs (e.g. agent rules files, `README.md`) to
+  learn the conventions.
 - **Prior work** — `session_search` for past sessions mentioning the same topic.
   Don't reinvent what was already attempted.
 
@@ -104,7 +105,7 @@ Available for this project:
 - Skills: <list 2-5 most relevant, with one-line purpose each>
 - MCP: <list servers, e.g. "github (PRs, issues, code review)">
 - Past sessions: <N matches on "<topic>", see <links>>
-- Conventions: <AGENTS.md / CLAUDE.md notes if found, else "none found">
+- Conventions: <project instruction docs if found, else "none found">
 ```
 
 ### Step 3 — Scaffold the Wiki (if configured)
